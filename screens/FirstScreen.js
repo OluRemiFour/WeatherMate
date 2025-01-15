@@ -20,8 +20,8 @@ export default function FirstScreen() {
     <LinearGradient
       colors={["#89F7FE", "#66A6FF"]}
       style={styles.container}
-      start={{ x: 0, y: 0 }} // Top-left
-      end={{ x: 1, y: 1 }} // Bottom-right
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
     >
       {/* <View style={styles.container}> */}
       <View style={styles.container}>

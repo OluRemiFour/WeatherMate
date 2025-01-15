@@ -14,8 +14,8 @@ export default function FourthScreen() {
     <LinearGradient
       colors={["#89F7FE", "#66A6FF"]}
       style={styles.container}
-      start={{ x: 0, y: 0 }} // Top-left
-      end={{ x: 1, y: 1 }} // Bottom-right
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
     >
       <View style={styles.container}>
         <View>
@@ -118,12 +118,6 @@ export default function FourthScreen() {
             }}
           ></View>
         </View>
-        {/* <TouchableOpacity
-          onPress={() => navigation.navigate("WeatherPage")}
-          style={{ position: "absolute", left: "65%", top: "-80%" }}
-        >
-          <Text style={{ fontSize: 15, fontWeight: "700" }}>Skip</Text>
-        </TouchableOpacity> */}
       </View>
     </LinearGradient>
   );
