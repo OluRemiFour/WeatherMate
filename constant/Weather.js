@@ -1,13 +1,14 @@
 import axios from "axios";
+import { EXPO_PUBLIC_API_KEY } from "@env";
 
 const forecastEndpoint = (
   params
-) => `https://api.weatherapi.com/v1/forecast.json?key=${process.env.PRIVATE_KEY}&q=${params.cityName}&days=${params.days}&alerts=no
+) => `https://api.weatherapi.com/v1/forecast.json?key=${EXPO_PUBLIC_API_KEY}&q=${params.cityName}&days=${params.days}&alerts=no
 `;
 
 const locationEndpoint = (
   params
-) => `https://api.weatherapi.com/v1/search.json?key=${process.env.PRIVATE_KEY}&q=${params.cityName}
+) => `https://api.weatherapi.com/v1/search.json?key=${EXPO_PUBLIC_API_KEY}&q=${params.cityName}
 `;
 
 const apiCall = async (endpoint) => {
@@ -33,7 +34,7 @@ export const fetchLcationForecast = (params) => {
 };
 
 export const getLocationName = async (latitude, longitude) => {
-  const privateKey = process.env.PRIVATE_KEY;
+  const privateKey = EXPO_PUBLIC_API_KEY;
   const url = `http://api.weatherapi.com/v1/current.json?key=${privateKey}&q=${latitude},${longitude}`;
 
   try {
